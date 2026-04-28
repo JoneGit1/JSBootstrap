@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": 2,
+      "nimi": "Hessu Hopo",
+      "puhelin": "asd"
+    },
+    {
+      "nimi": "Roope Ankka",
+      "puhelin": "050-1111111",
+      "id": 9
+    },
+    {
+      "nimi": "Mikki",
+      "puhelin": "50500",
+      "id": 10
+    },
+    {
+      "nimi": "dsad",
+      "puhelin": "as",
+      "id": 11
+    }
+  ]
+}

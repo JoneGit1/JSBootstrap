@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Puhelinluettelo</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h2>Puhelinluettelo</h2>
+
+    <table id="taulukko">
+      <tr>
+        <th>Nimi</th>
+        <th>Puhelin</th>
+      </tr>
+    </table>
+
+    <br />
+    <a href="index.html">Takaisin</a>
+
+    <script>
+      $(document).ready(function () {
+        $.getJSON("http://localhost:3000/data", function (data) {
+          $.each(data, function (key, value) {
+            $("#taulukko").append(
+              "<tr>" +
+                "<td>" +
+                value.nimi +
+                "</td>" +
+                "<td>" +
+                value.puhelin +
+                "</td>" +
+                "</tr>",
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
