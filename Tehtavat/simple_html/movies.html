@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elokuvat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
+        <h1>Karelia ammattikorkeakoulu - Joona Jaatinen</h1>
+      </div>
+
+      <div id="nav">
+        <ul>
+          <li><a href="index.html">Alku</a></li>
+          <li><a href="about.html">Tietoa</a></li>
+          <li><a href="opintojaksot.html">Opintojaksot</a></li>
+          <li><a href="contact.html">Viesti</a></li>
+          <li><a class="active" href="movies.html">Elokuvat</a></li>
+        </ul>
+      </div>
+
+      <div id="main">
+        <h2>Hyviä elokuvia</h2>
+        <p>Tässä on lista elokuvista joista pidän.</p>
+        <p>Voi valita elokuvan nähdäksesi kuvan</p>
+
+        <ul class="movies">
+          <li><a href="#" onclick="showMovie('lotr')">Lord of the Rings</a></li>
+          <li><a href="#" onclick="showMovie('shrek')">Shrek</a></li>
+          <li><a href="#" onclick="showMovie('matrix')">The Matrix</a></li>
+        </ul>
+      </div>
+
+      <div id="sidebar">
+        <h3>Elokuvan kuva</h3>
+        <img
+          id="movie-image"
+          src="images/"
+          alt=""
+          style="width: 100%; display: none"
+        />
+        <p id="copyright" style="display: none">
+          En omista elokuvien tai kuvien tekijänoikeuksia.
+        </p>
+      </div>
+
+      <div class="clr"></div>
+      <div id="footer"></div>
+      <p>Copyright &copy; 2026</p>
+    </div>
+
+    <script>
+      function showMovie(movie) {
+        const image = document.getElementById("movie-image");
+        const copyright = document.getElementById("copyright");
+
+        if (movie === "lotr") {
+          image.src = "images/Lord.png";
+          image.alt = "Lord of the Rings";
+        } else if (movie === "shrek") {
+          image.src = "images/Shrek.png";
+          image.alt = "Shrek";
+        } else if (movie === "matrix") {
+          image.src = "images/Matrix.png";
+          image.alt = "The Matrix";
+        }
+
+        image.style.display = "";
+        copyright.style.display = "";
+      }
+    </script>
+  </body>
+</html>
