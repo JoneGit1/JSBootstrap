@@ -11,12 +11,12 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, X-CSRF-Token"
+    "Origin, X-Requested-With, Content-Type, Accept, X-CSRF-Token",
   );
   // Request methods you wish to allow
   res.setHeader(
     "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE",
   );
 
   res.setHeader("Access-Control-Allow-Credentials", true); //salli evästeet
